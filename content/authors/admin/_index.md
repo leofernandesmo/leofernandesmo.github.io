@@ -48,6 +48,6 @@ profiles:
 I am Professor at the Federal Institue of Alagoas (Brazil), and currently, Visiting Researcher at Faculty of Engineering of University of Porto.
 My research interests is software quality and programmer productivity, which spans the spectrum from software engineering and programming languages. 
 
-I have a PhD and MSc in Computer Science from  [Informatics Center](http://www.cin.ufpe.br/) at Federal University of Pernambuco (advisor [André Santos](https://www.cin.ufpe.br/~alms/) and co-advisor [Marcio Ribeiro](www.ic.ufal.br/professor/marcio)) and a B.Sc. from [IFAL](https://www2.ifal.edu.br/) (former CEFET-AL).
+I have a PhD and MSc in Computer Science from  [Informatics Center](http://www.cin.ufpe.br/) at Federal University of Pernambuco (advisor [André Santos](https://www.cin.ufpe.br/~alms/) and co-advisor [Marcio Ribeiro](www.ic.ufal.br/professor/marcio)) and a BSc from [IFAL](https://www2.ifal.edu.br/) (former CEFET-AL).
 <!-- He leads the CPSoftware group, which develops ...   -->
 
