@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Software Engineering, IFAL & Visiting Research U.Porto
+role: Professor of Software Engineering @ IFAL & Visiting Research @ U.Porto
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Federal Institute of Alagoas
@@ -40,10 +40,14 @@ profiles:
   - icon: brands/orcid
     url: https://orcid.org/0000-0001-9090-2232
   # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
-  # - icon: custom/lattes
-  #   url: [uploads/resume.pdf](https://lattes.cnpq.br/4226060363182113)
+  - icon: custom/lattes
+    url: [uploads/resume.pdf](https://lattes.cnpq.br/4226060363182113)
     # label: Download my resume
 ---
 
-Leo Fernandes is a professor of software engineering and programming language at the Federal Institue of Alagoas (Brazil). His research interests include software testing, ..., ..., and .... He leads the CPSoftware group, which develops ...  
-<!-- self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks. -->
+I am Professor at the Federal Institue of Alagoas (Brazil), and currently, Visiting Researcher at Faculty of Engineering of University of Porto.
+My research interests is software quality and programmer productivity, which spans the spectrum from software engineering and programming languages. 
+
+I have a PhD and MSc in Computer Science from  [Informatics Center](http://www.cin.ufpe.br/) at Federal University of Pernambuco (advisor [André Santos](https://www.cin.ufpe.br/~alms/) and co-advisor [Marcio Ribeiro](www.ic.ufal.br/professor/marcio)) and a B.Sc. from [IFAL](https://www2.ifal.edu.br/) (former CEFET-AL).
+<!-- He leads the CPSoftware group, which develops ...   -->
+
