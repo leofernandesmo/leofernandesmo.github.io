@@ -40,8 +40,8 @@ profiles:
   - icon: brands/orcid
     url: https://orcid.org/0000-0001-9090-2232
   # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
-  - icon: custom/lattes
-    url: [uploads/resume.pdf](https://lattes.cnpq.br/4226060363182113)
+  # - icon: custom/lattes
+  #   url: [uploads/resume.pdf](https://lattes.cnpq.br/4226060363182113)
     # label: Download my resume
 ---
 
