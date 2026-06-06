@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Grand';
+    src: url('fonts/Grand-Thin.woff2') format('woff2'),
+         url('fonts/Grand-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grand';
+    src: url('fonts/Grand-Light.woff2') format('woff2'),
+         url('fonts/Grand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grand';
+    src: url('fonts/Grand-Regular.woff2') format('woff2'),
+         url('fonts/Grand-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grand';
+    src: url('fonts/Grand-Medium.woff2') format('woff2'),
+         url('fonts/Grand-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body { 
+	margin: 0;
+	padding: 0;
+	font-family: "Grand", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body, header, header img, main, main > p, main > p img {
+	width: 100%;
+	height: 100%;
+}
+
+body, header, footer { 
+	background: #fff; 
+}
+
+header {
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+header img {
+	display: block;
+	object-fit: cover;
+}
+
+footer {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 20px;
+}
+
+main {
+	top: 100%;
+	position: relative;
+}
+
+main > p, .about, .about section {
+	display: flex;
+}
+
+main > p span, .about section {
+	flex: 1;
+	margin: 20px;
+}
+
+main > p img {
+	display: block;
+	object-fit: contain;
+}
+
+main .about {
+	height: auto;
+	min-height: 100%;
+}
+
+.about section {
+	background: #DED7D4;
+	align-items: center;
+	justify-content: center;
+}
+
+.about h2 {
+	letter-spacing: -0.04em;
+	font-size: 4em;
+	font-weight: 300;
+	color: #fff;
+	margin: 0 auto;
+	max-width: 6.9em;
+	line-height: 1.1em;
+}
+
+.about p {
+	font-weight: 400;
+	max-width: 27em;
+	margin: 1em auto 1em auto;
+	line-height: 1.5em;
+}
+
+.about p, .about a:link, .about a:visited {
+	color: #484B65;
+}
+
+.about a:hover { color: #585B75; }
+.about a:active { color: #000; }
+
+.about section > div {
+	margin: 2em;
+}
+
+.little {
+	margin: 4px 0 0 20px;
+	z-index: 10;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+}
+
+.lockup {
+	font-size: 3em;
+	font-weight: 200;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #fff;
+}
+
+.lockup a:link, .lockup a:visited, .lockup a:active { text-decoration: none; color: #fff; }
+.lockup a:hover { color: #eee; }
+
+.wordmark, .lockup {
+	letter-spacing: -0.03em;
+}
+
+.wordmark {
+	font-weight: 500;
+}
+
+.about a.cta:link, .about a.cta:hover, .about a.cta:visited, .about a.cta:active {
+	text-decoration: none;
+	background: #4CC09B;
+	color: #fff;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+}
+
+.about a.cta:hover {
+	background: #81D2AF;
+}
+
+.about a.cta:active {
+	background: #2E998A;
+}
+
+@media (max-width: 36rem) {
+	main .about {
+		height: auto;
+		min-height: 0;
+	}
+
+	main > p, main > p img {
+		width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>First Principle: Walk before you run.</title>
+		<meta http-equiv="content-language" content="en-us">
+		<link rel="preload" href="../../assets/fonts/Grand-Regular-2022-01-30.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../../assets/fonts/Grand-Medium-2022-01-30.woff2" as="font" type="font/woff2" crossorigin>
+		<link href="../../assets/css/main-2022-01-30.css" rel="stylesheet" as="style">
+
+		<link rel="icon" href="../../favicon.ico" sizes="any">
+		<link rel="icon" href="../../assets/images/2022/icon-2022-01-30.svg" type="image/svg+xml">
+		<link rel="mask-icon" href="../../assets/images/2022/icon-2022-01-30.svg" color="#888">
+		<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+		<meta http-equiv="content-language" content="en-us">
+		<link rel="canonical" href="walk.html">
+		<meta name="description" content="Walk before you run. It's obviously true—so why do we all mess this up sometimes? Here's what I've learned about starting small.">
+
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://bensyverson.com/writing/2022/walk.html">
+		<meta property="og:title" content="First Principle: Walk before you run.">
+		<meta property="og:description" content="Walk before you run. It's obviously true—so why do we all mess this up sometimes? Here's what I've learned about starting small.">
+		<meta property="og:image" content="https://bensyverson.com/writing/2022/images/walk.jpg">
+
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://bensyverson.com/writing/2022/walk.html">
+		<meta property="twitter:title" content="First Principle: Walk before you run.">
+		<meta property="twitter:description" content="Walk before you run. It's obviously true—so why do we all mess this up sometimes? Here's what I've learned about starting small.">
+		<meta property="twitter:image" content="https://bensyverson.com/writing/2022/images/walk.jpg">
+
+	</head>
+	<body>
+		<div></div>
+		<article>
+			<h1>First Principle: Walk before you run</h1>
+			<p>This seems like a fitting place to begin. For a while now I’ve wanted to collect some of the insights and tools that have helped me in the course of my wandering career in entrepreneurship, software and design. The goal is mostly selfish; I want a place to go for reminders when I’m stuck. And sure enough, I didn’t know where to begin this writing project until I remembered one of my First Principles: “Walk before you run.”</p>
+
+			<p>I have a handful of these First Principles, and each one is a sort of meta-framework; once you recognize its pattern, you see the same concept rephrased and reframed in countless forms. Some are so familiar, they can be easy to ignore. But when you’re really stuck, sometimes you need to go back to the beginning and start from first principles.</p>
+
+			<h2 id="variations">Variations</h2>
+
+			<p>“You have to walk before you can run” is just the headline expression here. “Start small” is the same concept. So is “Minimum Viable Product,” and so is “<a href="https://en.wikiquote.org/wiki/Donald_Knuth">Premature optimization is the root of all evil.</a>” A few years ago I gave a talk with the tagline “Do it the wrong way, solve it the dumb way”—just get it out there, because whatever you think is the “Right” way… probably isn’t. Same idea.</p>
+
+			<p>A version that keeps coming up in my work is Gall’s Law:</p>
+
+			<blockquote>
+			A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
+			–<a href="https://en.wikipedia.org/wiki/John_Gall_(author)">John Gall</a>
+			</blockquote>
+
+			<p>This is what I love about “walk before you run.” It’s evergreen. It’s obviously true. Cliché, even. Yet we all screw this up at some point.</p>
+
+			<h2 id="running">Running first</h2>
+
+			<p>About five years ago at IDEO, I led a project for a mid-sized bank. Our challenge was to design an app to help Millennials build up their savings. After two rounds of research and design, we needed to pilot the system to learn whether it would help people save actual money over a longer timespan.</p>
+
+			<p>The client was adamant that we use their own bank accounts—but told us it would take 18 months to provide access. So we found an enterprise banking API vendor which had its own complicated onboarding and implementation roadmap. Then the client asked us to use Java Spring, while our contract developers were most familiar with Rails. The client’s security team required that our pilot app fully comply with Anti-Money Laundering regulations, which meant new identity verification UIs, and new requirements for logging and report generation on the back-end.</p>
+
+			<p>After spending six months and tons of money on the project, the client took delivery of the app (which moved real money, was AML compliant, had 2FA, FaceID and a gorgeous native UI) and… shelved it. There was never a pilot.</p>
+
+			<p>Despite all the constraints, I don’t blame the client. I was a relatively new Project Lead, eager to say “yes, we can do that.” I did push back, but I should have pushed back harder—in fact I should have <a href="https://en.wikipedia.org/wiki/Andon_(manufacturing)">pulled the emergency brake</a> at the first real sign of trouble. Our team knew the fastest way to test this idea was to use PayPal Subscriptions, which we could have prototyped in a week. <a href="https://plaid.com">Plaid</a> was another option which was production-ready. But what sunk the project was not technology—it was the fact that I had not built enough trust with the client team to convince them to walk first.</p>
+
+			<h2 id="mattebox">Mattebox</h2>
+
+			<p>Not that I’m immune. I started a new version of my photo app <a href="https://mattebox.com/">Mattebox</a> at the end of 2020, and like any good Swift developer, I used <a href="https://developer.apple.com/videos/play/wwdc2015/408/?id=408">Protocol-Oriented Programming</a>. Mattebox uses image filters, so I came up with a generic “Transformable” abstraction that represented any data that could be transformed through the action of an Operator (which itself followed “Transformer” protocol).</p>
+
+			<p>After three weeks of coding in my spare time, I finally had a working data model. It was about 500 lines of unreadable code, and the use of <a href="https://www.swiftbysundell.com/basics/generics/">Generics</a> made it a headache to do the one thing I was trying to do: filter images.</p>
+
+			<p>I threw the whole thing away, and wrote a <code>Color</code> model with three components: Red, Green &amp; Blue. Within an hour, I had a working system that allowed me to stack up image filters and process images. It still used protocols, but at a reasonable level of abstraction. The next day I had working <a href="https://en.wikipedia.org/wiki/Color_management">color management</a>.</p>
+
+			<p>Gall’s Law strikes again.</p>
+
+			<pre><code class="swift">struct Color {
+  var red, green, blue: Double
+}</code></pre>
+
+			<h2 id="practice">In practice</h2>
+
+			<p>It might seem like “walk before you run” only applies to the start of a project, but the reality is that even mid-sized efforts are made up of smaller projects. So every once in a while, I try to check in and ask myself:</p>
+
+			<ul>
+			<li><strong>Is there any possible way to start smaller, or simpler?</strong> There’s a reason prototyping is so central to IDEO’s process: it allows us to quickly learn what works—and more importantly, what doesn’t. If you’re making a platform to connect landlords and tenants, could you start it in Slack? If you’re building an app to help businesses source sustainable vendors, could it begin as a Google Doc? Be ruthless.</li>
+			<li><strong>Am I hung up on “scalability?”</strong> You probably don’t need to buy three redundant commercial sanders to sand one deck, but companies do this all the time. If you’re spending a lot of time on “infrastructure” or “scalability” before you have a significant volume, you’re getting ahead of yourself. <a href="http://paulgraham.com/ds.html">Do things that don’t scale.</a></li>
+			<li><strong>Am I “future-proofing?”</strong> Predicting the future is a tough game. The assumptions you make today will become outdated, and any extra work you do to make things easier for yourself might actually slow you down later with misplaced complexity and technical debt.</li>
+			<li><strong>Am I doing something because of “best practices?”</strong> “Best practices” are ideological, constantly changing, and colored by survivorship bias—a terrible combination. Listen to and learn from other people’s experiences, but remember that their situations are all different. Other people’s personal standards can stick in your mind, so make sure you’re not adopting them without thinking—you could be tying a hand behind your back.</li>
+			<li><strong>Am I jumping to a solution?</strong> Before you even walk, make sure you’re pointed in the right direction. No amount of agile iteration will tell you that your mobile app for baristas should have been a physical notebook.</li>
+			</ul>
+
+			<p>There’s much more to write on this topic, and even better examples keep coming to me. But in the spirit of this post, this is a good place to start.</p>
+
+			<footer>
+				<small>
+					Posted 2022-01-26 / Filed under <span>#firstprinciples</span> <span>#design</span> <span>#prototyping</span> <span>#strategy</span>
+				</small>
+				<h4><a href="../../index.html">Ben Syverson</a></h4>
+				/ <a href="../../index.html#writing">Writing</a>
+			</footer>
+		</article>
+		<footer>
+			<p>
+				<small>Copyright 2022 <a href="../../index.html">Ben Syverson</a></small>
+			</p>
+		</footer>
+		<header><a href="../../index.html">Ben Syverson</a></header>
+	</body>
+</html>

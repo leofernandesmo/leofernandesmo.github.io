@@ -1,0 +1,208 @@
+/* ── Fonts ──────────────────────────────────────────── */
+@font-face {
+	font-family: "Grand";
+	src: url("../fonts/Grand-Regular-2022-01-30.woff2") format("woff2");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Grand";
+	src: url("../fonts/Grand-Medium-2022-01-30.woff2") format("woff2");
+	font-weight: 500;
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+html, body, h1, h2, h3, footer, header, section, ul, li, div, nav {
+	margin: 0;
+	padding: 0;
+}
+
+html { background: #FDFBF8; }
+
+body {
+	font-family: "Grand", sans-serif;
+	font-size: 1.1rem;
+}
+
+/* ── Typography ─────────────────────────────────────── */
+h1, h2, h3 {
+	font-weight: 500;
+	letter-spacing: -0.05em;
+}
+
+h1 {
+	font-size: 5rem;
+	margin-left: -0.2rem;
+	font-weight: 500;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+	letter-spacing: -0.03em;
+	margin-bottom: 0.3rem;
+}
+
+p {
+	margin-block: 1.2rem;
+	line-height: 1.45em;
+}
+
+li {
+	margin-block: 0.7rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* ── Header (aurora gradient hero) ─────────────────── */
+header {
+	color: #000;
+	width: 100%;
+	background: linear-gradient(0,
+		#FDFBF8 0%,
+		#fdf096 5%,
+		#fda046 15%,
+		#fd6464 21%,
+		#c0508c 28%,
+		#0046b4 40%,
+		#000a6e 70%,
+		#00000a 90%,
+		#000002 92%,
+		#000 100%);
+}
+
+header > article {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #FDFBF8;
+	mix-blend-mode: lighten;
+	margin-bottom: 20vh;
+}
+
+header > article > div {
+	width: 30rem;
+	margin: 0 1rem;
+	background: #FDFBF8;
+	position: fixed;
+	z-index: 1;
+}
+
+header, footer {
+	min-height: 100vh;
+}
+
+/* ── Footer (main content area) ────────────────────── */
+footer {
+	color: #334;
+	z-index: 2;
+	position: relative;
+	background: linear-gradient(180deg,
+		#FDFBF8 0%,
+		#f6f5f3 50%,
+		#d5d8e9 100%);
+}
+
+footer > section {
+	width: 30rem;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+}
+
+footer > section + section {
+	border-top: 1px solid #dde;
+	padding-top: 3rem;
+}
+
+/* ── Links ──────────────────────────────────────────── */
+a:link    { color: #08f;  text-decoration: none; border-bottom: 1px dotted #08f;  transition: color 0.15s; }
+a:visited { color: #40f;  border-bottom: 1px dotted #40f; }
+a:hover   { color: #f00;  border-bottom: 1px dotted #f00; }
+a:active  { color: #0f0;  border-bottom: 1px dotted #0f0; }
+
+footer a:link    { color: #0046b4; border-bottom: 1px dotted #0046b4; }
+footer a:visited { color: #c04678; border-bottom: 1px dotted #c04678; }
+footer a:hover   { color: #006;    border-bottom: 1px dotted #006; }
+footer a:active  { color: #ffa046; border-bottom: 1px dotted #ffa046; }
+
+/* ── Content components ─────────────────────────────── */
+.pub-item, .project-item, .course-item {
+	margin-bottom: 1.4rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 1px solid #e8e8f0;
+}
+
+.pub-item:last-child,
+.project-item:last-child,
+.course-item:last-child {
+	border-bottom: none;
+}
+
+.pub-meta, .course-meta {
+	font-size: 0.85rem;
+	color: #778;
+	margin-top: 0.2rem;
+	line-height: 1.4em;
+}
+
+.tag {
+	display: inline-block;
+	font-size: 0.75rem;
+	background: #eef0fa;
+	color: #446;
+	border-radius: 0.4rem;
+	padding: 0.1rem 0.5rem;
+	margin-right: 0.3rem;
+	margin-top: 0.3rem;
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.contact-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.contact-label {
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #99a;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 36rem) {
+	header > article { justify-content: left; }
+	header > article > div { width: auto; margin: 0 2rem; }
+	footer > section { width: auto; margin: 0 2rem; }
+	h1, h2 { margin-left: -0.15rem; font-size: 3.5rem; }
+	.contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 25rem) {
+	header > article > div { margin: 0 20px 20vh 20px; }
+	body { font-size: 0.9rem; }
+	h1, h2 { font-size: 2rem; margin-left: -0.1rem; }
+}
+
+@media (max-width: 10rem) {
+	header > article > div {
+		margin: 100px 20px;
+		position: relative;
+	}
+}

@@ -1,0 +1,289 @@
+@font-face {
+ font-family: "Grand";
+ src: url("../fonts/Grand-Regular-2022-01-30.woff2") format("woff2");
+ font-weight: 400;
+}
+
+@font-face {
+ font-family: "Grand";
+ src: url("../fonts/Grand-Medium-2022-01-30.woff2") format("woff2");
+ font-weight: 500;
+}
+
+html, body, h1, h2, h3, ul, ol, header, footer, div, main, section {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Grand", sans-serif;
+	color: #334;
+	background: #FDFBF8;
+	font-size: 1.1rem;
+}
+
+body, article, body > footer {
+	display: flex;
+	flex-direction: column;
+}
+
+article > hr {
+	border: 0.5px solid #334;
+	margin-block: auto;
+}
+
+a {
+	transition: color 0.25s;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 1rem;
+}
+
+header > a {
+	display: block;
+	width: 12rem;
+	margin: 0 auto;
+	white-space: nowrap;
+	font-size: 1.98rem;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	z-index: 1;
+}
+
+header > a:link, footer a:link, header > a:visited, footer a:visited {
+	color: #334;
+	text-decoration: none;
+	border-bottom: none;
+}
+header > a:hover, footer a:hover { color: #0be; }
+header > a:active, footer a:active { color: #be0; }
+
+body > div {
+	width: 100%;
+	height: 11rem;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	mix-blend-mode: lighten;
+	pointer-events: none;
+	background: linear-gradient(0,
+		#FDFBF8 0%,
+		#fdf096 5%,
+		#fda046 15%,
+		#fd6464 21%,
+		#c0508c 28%,
+		#0046b4 40%,
+		#000a6e 70%,
+		#00000a 90%,
+		#000002 92%,
+		#000 100%);
+}
+
+article {
+	order: 2;
+	margin: 11rem auto 0rem auto;
+	padding-bottom: 2rem;
+	z-index: 5;
+	background: #FDFBF8;
+	align-items: center;
+}
+
+h1, h2, h3, h4, strong {
+	font-weight: 500;
+}
+
+h1 {
+	margin: 0 0 5rem -0.1em;
+	font-size: 5rem;
+	line-height: 1.1em;
+	letter-spacing: -0.04em;
+}
+
+h4 {
+	font-size: 1.7rem;
+	letter-spacing: -0.03em;
+}
+
+h2 {
+	font-size: 2.2rem;
+	letter-spacing: -0.02em;
+	margin-block-start: 1rem;
+}
+
+strong {
+	letter-spacing: -0.01em;
+}
+
+article > *, body > footer > p {
+	width: 36rem;
+	position: relative;
+	z-index: 5;
+	left: 12rem;
+}
+
+article > blockquote {
+	width: 35rem;
+	padding-left: 1rem;
+	font-size: 0.95rem;
+	border-left: 4px solid #dde;
+}
+
+small {
+	font-size: 0.77rem;
+}
+
+blockquote, article > p, article > ul > li, small {
+	line-height: 1.4em;
+}
+
+article > p, article > ul > li {
+	margin-block: 0.7rem;
+}
+
+article > ul > li {
+	list-style-position: outside;
+	margin-bottom: 1em;
+}
+
+article code {
+	padding: 0.2em;
+	background: #f8f5f0;
+	border-radius: 0.5em;
+	color: #667;
+}
+
+article > pre > code {
+	margin: 0 -1em;
+	display: block;
+	padding: 1em;
+	font-size: 0.9rem;
+	overflow: scroll;
+}
+
+article > .full {
+	width: 100%;
+	left: auto;
+	display: flex;
+	justify-content: center;
+	object-fit: contain;
+}
+
+article > p > img, .full > span > img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100vh;
+	display: block;
+	border-radius: 0.3rem;
+}
+
+article small > span {
+	background: #bfd;
+	padding: 0.1em 0.5em;
+	border-radius: 0.77rem;
+}
+
+body > footer a:link, body > footer a:visited, body > footer {
+	color: #88a;
+}
+
+body > footer a:hover { color: #f06; }
+body > footer a:active { color: #fa0; }
+
+body > footer {
+	position: relative;
+	order: 3;
+	width: 100%;
+	z-index: 4;
+	background: linear-gradient(0,
+		#FDFBF8 0%,
+		#d8d8df 75%,
+		#b8b8c8 90%,
+		#8a92af 100%);
+	align-items: center;
+	padding-top: 5rem;
+	color: #88a;
+}
+
+article > footer {
+	font-size: 1.7rem;
+	margin-top: 6rem;
+}
+
+article > footer > small {
+	display: block;
+	padding: 1rem 0;
+	margin-bottom: 0.25rem;
+	border-top: 1px solid #334;
+	border-bottom: 4px solid #334;
+}
+
+article > footer > h4 {
+	display: inline;
+	margin: 0.25em 0;
+}
+
+.full > span {
+	display: block;
+	margin: 1rem;
+}
+
+a:link {
+	color: #0046b4;
+	text-decoration: none;
+	border-bottom: 1px dotted #0046b4;
+}
+a:visited { color: #c04678; border-bottom: 1px dotted #c04678;}
+a:hover { color: #006; border-bottom: 1px dotted #006; }
+a:active { color: #ffa046; border-bottom: 1px dotted #ffa046; }
+
+/* Center the body column on narrower screens */
+@media (max-width: 64rem) {
+	article > *, body > footer > p { left: 0; }
+	header > a {
+		width: 36rem;
+	}
+}
+
+/* On small screens, just use a margin. */
+@media (max-width: 40rem) {
+	article, body > footer {
+		display: block;
+		width: 100%;
+	}
+
+	article > *, header > a, body > footer > p, article > blockquote {
+		width: auto;
+		max-width: 100%;
+		margin-left: 1.7rem;
+		margin-right: 1.7rem;
+	}
+
+	article > h1 {
+		margin-left: 1.6rem;
+	}
+
+	article > footer {
+		width: auto;
+	}
+
+	article > .full {
+		margin: 0;
+	}
+
+	article > .full span {
+		margin: 0.2rem;
+	}
+
+	h1, footer h3 {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 32rem) {
+	article { font-size: 1.1rem; }
+	header > a { margin: 0 0 0 1.7rem; }
+}
