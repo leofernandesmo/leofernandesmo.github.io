@@ -11,6 +11,8 @@
 	font-weight: 500;
 }
 
+
+
 /*
  * IFAL Institutional Color Palette
  * ----------------------------------
@@ -21,6 +23,22 @@
  * --ifal-red-dark:    #8B0D1F  (deep red)
  * --base:             #F8FBF8  (warm off-white, green-tinted)
  */
+
+
+:root {
+    --base: #F8FBF8;
+
+    --ifal-green: #007A3D;
+    --ifal-green-light: #00A651;
+    --ifal-green-dark: #005C2E;
+
+    --ifal-red: #C8102E;
+    --ifal-red-dark: #8B0D1F;
+
+    --text: #2a3328;
+    --muted: #6a9070;
+    --border: #c2d9c8;
+}
 
 /* ── Reset ──────────────────────────────────────────── */
 html, body, h1, h2, h3, footer, header, section, ul, li, div, nav {
@@ -160,6 +178,85 @@ footer a:visited { color: #8B0D1F; border-bottom: 1px dotted #8B0D1F; }
 footer a:hover   { color: #C8102E; border-bottom: 1px dotted #C8102E; }
 footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
 
+/* ==================================================
+   Social Links & Site Navigation
+   ================================================== */
+
+.social-links,
+.site-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.25rem;
+
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+.site-links {
+    margin-top: 1.5rem;
+}
+
+.social-links {
+    font-size: 0.95rem;
+}
+
+.site-links {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.social-links a,
+.site-links a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    border-bottom: none;
+
+    transition:
+        opacity 0.2s ease,
+        color 0.2s ease;
+}
+
+.social-links a:hover,
+.site-links a:hover {
+    opacity: 0.65;
+}
+
+.social-links a:not(:last-child)::after,
+.site-links a:not(:last-child)::after {
+    content: "•";
+
+    display: inline-block;
+
+    margin-left: 0.75rem;
+
+    color: #888;
+
+    font-weight: normal;
+}
+
+/* ----------------------------------
+
+   Mobile
+
+---------------------------------- */
+
+@media (max-width: 768px) {
+
+    .social-links,
+
+    .site-links {
+
+        justify-content: center;
+
+    }
+
+}
+
 /* ── Content components ─────────────────────────────── */
 .pub-item, .project-item, .course-item {
 	margin-bottom: 1.4rem;
@@ -219,6 +316,16 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
 	footer > section { width: auto; margin: 0 2rem; }
 	h1, h2 { margin-left: -0.15rem; font-size: 3.5rem; }
 	.contact-grid { grid-template-columns: 1fr; }
+	.page,
+    .page-header-content,
+    .page-footer {
+        width: auto;
+        margin: 0 2rem;
+    }
+
+    .page h1 {
+        font-size: 3.5rem;
+    }
 }
 
 @media (max-width: 25rem) {
@@ -232,4 +339,136 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
 		margin: 100px 20px;
 		position: relative;
 	}
+}
+
+/* ==================================================
+   Internal Pages
+   ================================================== */
+
+.page-header {
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.page-header-content {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.home-link {
+    color: var(--ifal-green);
+
+    text-decoration: none;
+
+    border-bottom: none;
+
+    font-weight: 500;
+}
+
+.home-link:hover {
+    opacity: 0.7;
+}
+
+.page {
+    width: 30rem;
+
+    margin: 0 auto;
+
+    padding:
+        3rem
+        1rem
+        6rem
+        1rem;
+}
+
+.page h1 {
+    font-size: 4rem;
+
+    margin-bottom: 2rem;
+}
+
+.page h2 {
+    font-size: 1.8rem;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page p {
+    line-height: 1.5;
+}
+
+.page ul {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.page li {
+    margin-bottom: 0.75rem;
+}
+
+.page-footer {
+    width: 30rem;
+
+    margin: 0 auto;
+
+    padding:
+        2rem
+        1rem
+        6rem
+        1rem;
+}
+
+.back-link {
+    color: var(--ifal-green);
+
+    text-decoration: none;
+
+    border-bottom: none;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+
+/* ==================================================
+   Simple Content Pages
+   ================================================== */
+
+.page-content {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+}
+
+.page-content h1 {
+    margin-bottom: 2rem;
+}
+
+.page-content h2 {
+    margin-top: 3rem;
+}
+
+@media (max-width: 36rem) {
+
+    .page-content {
+        width: auto;
+        margin: 0 2rem;
+    }
+
+}
+
+.content-page {
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #F8FBF8 0%,
+        #F8FBF8 40%,
+        #f0f7f2 75%,
+        #d4e8da 100%
+    );
 }
