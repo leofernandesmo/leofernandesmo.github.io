@@ -520,3 +520,49 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
     );
 }
 
+/* ==================================================
+   Publications
+   ================================================== */
+
+.pub-authors {
+
+    margin-top: 0.4rem;
+
+    margin-bottom: 0.25rem;
+
+    color: #4d6655;
+
+    line-height: 1.5;
+}
+
+.pub-venue {
+
+    margin-top: 0;
+
+    margin-bottom: 0.6rem;
+
+    font-size: 0.9rem;
+
+    color: #6d8374;
+}
+
+.pub-links {
+
+    margin-top: 0.6rem;
+
+    margin-bottom: 0.8rem;
+
+    font-size: 0.9rem;
+}
+
+.pub-links a {
+
+    border-bottom: none;
+}
+
+.author-me {
+
+    font-weight: 500;
+
+    color: #005C2E;
+}
