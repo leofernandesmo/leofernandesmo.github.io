@@ -182,7 +182,6 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
    Social Links & Site Navigation
    ================================================== */
 
-.social-links,
 .site-links {
     display: flex;
     flex-wrap: wrap;
@@ -199,16 +198,13 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
     margin-top: 1.5rem;
 }
 
-.social-links {
-    font-size: 0.95rem;
-}
+
 
 .site-links {
     font-size: 0.95rem;
     font-weight: 500;
 }
 
-.social-links a,
 .site-links a {
     color: var(--text);
 
@@ -221,13 +217,12 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
         color 0.2s ease;
 }
 
-.social-links a:hover,
 .site-links a:hover {
     opacity: 0.65;
 }
 
-.social-links a:not(:last-child)::after,
 .site-links a:not(:last-child)::after {
+
     content: "•";
 
     display: inline-block;
@@ -237,7 +232,59 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
     color: #888;
 
     font-weight: normal;
+
 }
+
+/* ==================================================
+   Social Links (Icons)
+   ================================================== */
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-bottom: none;
+
+    text-decoration: none;
+}
+
+.social-links img {
+
+    width: 28px;
+    height: 28px;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-links img:hover {
+
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+
 
 /* ----------------------------------
 
@@ -472,3 +519,4 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
         #d4e8da 100%
     );
 }
+
