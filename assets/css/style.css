@@ -11,13 +11,24 @@
 	font-weight: 500;
 }
 
+/*
+ * IFAL Institutional Color Palette
+ * ----------------------------------
+ * --ifal-green:       #007A3D  (primary green)
+ * --ifal-green-light: #00A651  (lighter green)
+ * --ifal-green-dark:  #005C2E  (dark green)
+ * --ifal-red:         #C8102E  (institutional red)
+ * --ifal-red-dark:    #8B0D1F  (deep red)
+ * --base:             #F8FBF8  (warm off-white, green-tinted)
+ */
+
 /* ── Reset ──────────────────────────────────────────── */
 html, body, h1, h2, h3, footer, header, section, ul, li, div, nav {
 	margin: 0;
 	padding: 0;
 }
 
-html { background: #FDFBF8; }
+html { background: #F8FBF8; }
 
 body {
 	font-family: "Grand", sans-serif;
@@ -53,29 +64,31 @@ p {
 	line-height: 1.45em;
 }
 
-li {
-	margin-block: 0.7rem;
-}
+li { margin-block: 0.7rem; }
+ul { list-style-type: none; }
 
-ul {
-	list-style-type: none;
-}
-
-/* ── Header (aurora gradient hero) ─────────────────── */
+/* ── Header — IFAL gradient hero ────────────────────── */
+/*
+ * The gradient traverses the IFAL palette bottom-to-top:
+ * cream → light green → institutional green → deep green
+ * → institutional red → deep red → near-black
+ * reproducing the same mix-blend-mode: lighten mechanic
+ * of the original aurora effect.
+ */
 header {
 	color: #000;
 	width: 100%;
 	background: linear-gradient(0,
-		#FDFBF8 0%,
-		#fdf096 5%,
-		#fda046 15%,
-		#fd6464 21%,
-		#c0508c 28%,
-		#0046b4 40%,
-		#000a6e 70%,
-		#00000a 90%,
-		#000002 92%,
-		#000 100%);
+		#F8FBF8  0%,
+		#e6f7ee  4%,
+		#7ecf9a  10%,
+		#00A651  18%,
+		#007A3D  27%,
+		#005C2E  36%,
+		#C8102E  50%,
+		#8B0D1F  68%,
+		#1a0008  88%,
+		#000     100%);
 }
 
 header > article {
@@ -84,7 +97,7 @@ header > article {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #FDFBF8;
+	background: #F8FBF8;
 	mix-blend-mode: lighten;
 	margin-bottom: 20vh;
 }
@@ -92,7 +105,7 @@ header > article {
 header > article > div {
 	width: 30rem;
 	margin: 0 1rem;
-	background: #FDFBF8;
+	background: #F8FBF8;
 	position: fixed;
 	z-index: 1;
 }
@@ -101,15 +114,19 @@ header, footer {
 	min-height: 100vh;
 }
 
-/* ── Footer (main content area) ────────────────────── */
+/* ── Footer — main content area ─────────────────────── */
+/*
+ * Subtle green wash in the footer gradient echoes
+ * the institutional green without overpowering the text.
+ */
 footer {
-	color: #334;
+	color: #2a3328;
 	z-index: 2;
 	position: relative;
 	background: linear-gradient(180deg,
-		#FDFBF8 0%,
-		#f6f5f3 50%,
-		#d5d8e9 100%);
+		#F8FBF8  0%,
+		#f0f7f2  45%,
+		#d4e8da  100%);
 }
 
 footer > section {
@@ -119,26 +136,35 @@ footer > section {
 }
 
 footer > section + section {
-	border-top: 1px solid #dde;
+	border-top: 1px solid #c2d9c8;
 	padding-top: 3rem;
 }
 
 /* ── Links ──────────────────────────────────────────── */
-a:link    { color: #08f;  text-decoration: none; border-bottom: 1px dotted #08f;  transition: color 0.15s; }
-a:visited { color: #40f;  border-bottom: 1px dotted #40f; }
-a:hover   { color: #f00;  border-bottom: 1px dotted #f00; }
-a:active  { color: #0f0;  border-bottom: 1px dotted #0f0; }
+/*
+ * Hero links (on the #F8FBF8 card):
+ *   default  → IFAL green
+ *   visited  → IFAL red
+ *   hover    → dark green
+ *   active   → amber (contrast accent)
+ *
+ * Footer links follow the same logic, slightly deeper.
+ */
+a:link    { color: #007A3D; text-decoration: none; border-bottom: 1px dotted #007A3D; transition: color 0.15s; }
+a:visited { color: #C8102E; border-bottom: 1px dotted #C8102E; }
+a:hover   { color: #005C2E; border-bottom: 1px dotted #005C2E; }
+a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
 
-footer a:link    { color: #0046b4; border-bottom: 1px dotted #0046b4; }
-footer a:visited { color: #c04678; border-bottom: 1px dotted #c04678; }
-footer a:hover   { color: #006;    border-bottom: 1px dotted #006; }
-footer a:active  { color: #ffa046; border-bottom: 1px dotted #ffa046; }
+footer a:link    { color: #005C2E; border-bottom: 1px dotted #005C2E; }
+footer a:visited { color: #8B0D1F; border-bottom: 1px dotted #8B0D1F; }
+footer a:hover   { color: #C8102E; border-bottom: 1px dotted #C8102E; }
+footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
 
 /* ── Content components ─────────────────────────────── */
 .pub-item, .project-item, .course-item {
 	margin-bottom: 1.4rem;
 	padding-bottom: 1.4rem;
-	border-bottom: 1px solid #e8e8f0;
+	border-bottom: 1px solid #c8dece;
 }
 
 .pub-item:last-child,
@@ -149,16 +175,17 @@ footer a:active  { color: #ffa046; border-bottom: 1px dotted #ffa046; }
 
 .pub-meta, .course-meta {
 	font-size: 0.85rem;
-	color: #778;
+	color: #557060;
 	margin-top: 0.2rem;
 	line-height: 1.4em;
 }
 
+/* Tags use IFAL green as accent */
 .tag {
 	display: inline-block;
 	font-size: 0.75rem;
-	background: #eef0fa;
-	color: #446;
+	background: #e0f2e8;
+	color: #005C2E;
 	border-radius: 0.4rem;
 	padding: 0.1rem 0.5rem;
 	margin-right: 0.3rem;
@@ -182,7 +209,7 @@ footer a:active  { color: #ffa046; border-bottom: 1px dotted #ffa046; }
 	font-size: 0.78rem;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	color: #99a;
+	color: #6a9070;
 }
 
 /* ── Responsive ─────────────────────────────────────── */
