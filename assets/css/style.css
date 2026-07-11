@@ -640,6 +640,20 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
     margin-bottom: 0;
 }
 
+.accordion-panel h3 {
+    margin-top: 1.75rem;
+}
+
+.topic-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 1rem 0;
+}
+
+.topic-list li {
+    margin-block: 0.5rem;
+}
+
 @starting-style {
     .accordion[open] .accordion-panel {
         opacity: 0;
