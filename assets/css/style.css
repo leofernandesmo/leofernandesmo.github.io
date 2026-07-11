@@ -654,6 +654,32 @@ footer a:active  { color: #d47800; border-bottom: 1px dotted #d47800; }
     margin-block: 0.5rem;
 }
 
+.instructor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.instructor-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+}
+
+.instructor-name {
+    margin: 0;
+    font-weight: 500;
+}
+
+.instructor-role {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
 @starting-style {
     .accordion[open] .accordion-panel {
         opacity: 0;
