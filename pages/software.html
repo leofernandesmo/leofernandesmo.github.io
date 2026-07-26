@@ -27,14 +27,10 @@
             <h1>Software</h1>
 
             <p>
-                Software systems I've helped design and develop for
-                institutional use, registered as Computer Programs with
-                Brazil's National Institute of Industrial Property (INPI).
-            </p>
-
-            <p>
-                <em>Descriptions below are written in Brazilian Portuguese
-                (pt-BR), reflecting the official registration language.</em>
+                Software and research tools I've helped design and develop —
+                from institutional systems registered with Brazil's National
+                Institute of Industrial Property (INPI) to open research
+                tooling built as part of my academic work.
             </p>
 
         </section>
@@ -109,6 +105,101 @@
                     <span class="tag">IFAL</span>
                     <span class="tag">Gestão de Estágios</span>
                     <span class="tag">Automação</span>
+
+                </div>
+
+            </details>
+
+            <details class="accordion" name="software-accordion">
+
+                <summary class="accordion-summary">
+                    <h2>arrabida — Automated Fuzz Driver Generation for Java</h2>
+                    <svg class="accordion-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </summary>
+
+                <div class="accordion-panel">
+
+                    <p>
+                        <a href="https://osf.io/wjkx5/overview?view_only=b8193c6be5304ca898cc0e3d16f905af" target="_blank" rel="noopener">Replication package (OSF)</a>
+                    </p>
+
+                    <h3>Problem</h3>
+
+                    <p>
+                        Coverage-guided fuzzing is highly effective at finding
+                        security and reliability bugs, but adoption is
+                        bottlenecked by <em>fuzz drivers</em> — small pieces of
+                        harness code that translate raw byte streams into
+                        valid API calls. Writing them by hand is labor-
+                        intensive, error-prone, and often impractical for the
+                        thousands of libraries with complex, interdependent
+                        APIs that OSS-Fuzz continuously tests: OSS-Fuzz
+                        reports an average coverage of around 30% across more
+                        than 1,300 projects, with driver scarcity a key
+                        contributing factor.
+                    </p>
+
+                    <h3>Approach</h3>
+
+                    <p>
+                        arrabida automates fuzz driver generation for Java
+                        libraries by combining static analysis with
+                        search-based unit test generation (via EvoSuite).
+                        It parses a target class to extract its API surface,
+                        exception behavior, and type dependencies, generates
+                        unit tests exercising that API, filters them for
+                        relevance (target reachability, public-API compliance,
+                        transformability, and expected-exception cataloging),
+                        and rewrites the survivors into a single
+                        Jazzer-compatible <code>fuzzerTestOneInput</code>
+                        harness — replacing hard-coded literals with fuzzer
+                        input, suppressing expected exceptions, and applying
+                        driver-level optimizations such as crash
+                        de-duplication. Unlike LLM-based driver synthesis,
+                        arrabida is fully deterministic and reproducible.
+                    </p>
+
+                    <h3>Results</h3>
+
+                    <p>
+                        In a preliminary multi-case evaluation against
+                        manually written OSS-Fuzz drivers on three real-world
+                        Java libraries (brotli-java, cbor-java, and
+                        httpcomponents-core), arrabida-generated drivers
+                        achieved higher edge coverage on all three subjects,
+                        explored a consistently larger number of distinct
+                        behavioral features, and surfaced more unique crashes
+                        overall (11 vs. 8) — including failures the manual
+                        drivers missed entirely, while still reproducing key
+                        high-impact issues.
+                    </p>
+
+                    <h3>Collaboration &amp; Support</h3>
+
+                    <p>
+                        Developed during a sabbatical as a postdoctoral
+                        researcher at the Faculty of Engineering, University
+                        of Porto (FEUP), with Juvenal Carvalho, André Catarino,
+                        José Campos, Elvys Soares, and Rui Abreu. Supported by
+                        LASIGE (UID/00408/2025), an FCT scholarship
+                        (SFRH/BD/151433/2021), the SALVE project
+                        (2024.14936.PEX), and HPC (2025.08039.CPCA).
+                    </p>
+
+                    <p>
+                        <em>Automated Fuzz Driver Generation for Java via
+                        Search-Based Testing: A Preliminary Study</em>,
+                        CibSE 2026.
+                    </p>
+
+                    <span class="tag">Fuzzing</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">EvoSuite</span>
+                    <span class="tag">OSS-Fuzz</span>
+                    <span class="tag">Search-Based Testing</span>
 
                 </div>
 
