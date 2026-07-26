@@ -6,3 +6,14 @@ document.querySelectorAll("[data-email-user]").forEach(function (el) {
 	el.href = "mailto:" + address;
 	el.textContent = address;
 });
+
+// Opens a <details> accordion item when linked to directly via URL
+// fragment (e.g. software.html#arrabida), since not all browsers
+// auto-expand <details> on fragment navigation.
+if (location.hash) {
+	var target = document.querySelector(location.hash);
+	if (target && target.tagName === "DETAILS") {
+		target.open = true;
+		target.scrollIntoView();
+	}
+}
